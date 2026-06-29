@@ -1,0 +1,1910 @@
+---
+title: The TCREI Framework — Prompt Mastery
+sidebar_label: TCREI Framework
+description: A practical guide to writing better AI prompts using the TCREI framework, with 53 before/after examples across 10 domains.
+tags:
+  - prompting
+  - AI
+  - TCREI
+  - practical guide
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# The TCREI Framework — Prompt Mastery
+
+A practical system for writing AI prompts that get precise, useful results every time.
+
+---
+
+## What is TCREI?
+
+TCREI is a five-element framework. Every great prompt uses at least two or three of these elements — the more complex the task, the more elements you need.
+
+| Letter | Element | What it does |
+|--------|---------|-------------|
+| **T** | **Task** | The exact action you want performed. Be specific: *"write a 150-word intro"* beats *"write something"* |
+| **C** | **Context** | The situation, audience, constraints, or background. This separates a generic answer from one that fits your world |
+| **R** | **Role** | A persona or expert identity to adopt. Shapes tone, vocabulary, and angle |
+| **E** | **Examples** | A sample of good (or bad) output. The fastest way to calibrate tone, style, or format |
+| **I** | **Instructions** | Format rules, constraints, things to avoid, or step-by-step requirements |
+
+:::tip The single most common mistake
+Most people write **Task-only** prompts and leave out Context. Adding just one sentence of context — audience, purpose, constraints — typically doubles the quality of the output.
+:::
+
+---
+
+## Framework Quick Reference
+
+```
+T — Task        → What do you want done? (specific verb + deliverable)
+C — Context     → Who is the audience? What's the situation?
+R — Role        → What expert should Claude be?
+E — Examples    → Show a sample of the output style or format
+I — Instructions → What constraints, format rules, or things to avoid?
+```
+
+---
+
+## 53 Examples: Weak vs Strong Prompts
+
+Each example shows you a **weak prompt** and a **strong prompt** with the TCREI elements highlighted. Study the difference — then apply the same thinking to your own prompts.
+
+---
+
+### Writing
+
+#### 1. Blog Post Intro
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write an intro for a blog post about productivity.
+        ```
+
+        *What's missing: No audience, no tone, no angle, no length, no hook direction.*
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write a compelling 150-word intro paragraph for a blog post titled
+        "Why Your To-Do List Is Lying to You". The audience is busy
+        professionals aged 25–40 who feel overwhelmed. Start with a
+        surprising statistic or provocative question to hook them.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write a compelling 150-word intro paragraph |
+        | **C** | Audience: busy professionals 25–40 who feel overwhelmed |
+        | **I** | Start with a surprising statistic or provocative question |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 2. LinkedIn Post
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write a LinkedIn post about leadership.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write a LinkedIn post (200–250 words) from the perspective of a
+        first-time engineering manager reflecting on their first 90 days
+        leading a team. Include one specific, concrete mistake they made
+        and what they learned. Tone: honest, vulnerable, not preachy.
+        No hashtag spam — maximum 3 hashtags.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write a 200–250 word LinkedIn post |
+        | **C** | First-time engineering manager, first 90 days |
+        | **I** | One concrete mistake + lesson; honest tone; max 3 hashtags |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 3. Product Description
+
+**Elements used:** `T` `C` `E` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write a product description for headphones.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write a 100-word product description for noise-cancelling wireless
+        headphones priced at $299. Target audience: remote workers in open
+        offices. Highlight: 40-hour battery, adaptive ANC, and comfort for
+        long sessions. Tone: confident and direct, not hypey.
+
+        Example of tone to AVOID:
+        "Revolutionary sound that will transform your life forever!"
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write a 100-word product description |
+        | **C** | Remote workers, $299 headphones |
+        | **E** | Example of tone to avoid |
+        | **I** | Highlight 3 specific features; confident and direct tone |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 4. Executive Summary
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Summarize this document.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write an executive summary (250 words max) of the attached market
+        research report for a board of directors meeting. The board has
+        5 minutes to read it. Lead with the single most important finding.
+        End with the key decision they need to make.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write a 250-word executive summary |
+        | **C** | Board of directors; 5-minute reading time |
+        | **I** | Lead with top finding; end with the key decision |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 5. Cold Outreach Email
+
+**Elements used:** `T` `C` `E` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write a cold email.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write a cold outreach email from a freelance UX designer to the
+        head of product at a mid-size SaaS company. Goal: land a 20-minute
+        discovery call. Keep it under 120 words. Reference that they just
+        launched a new feature (keep it vague as a placeholder). Lead with
+        value, not with yourself.
+
+        Do NOT open with: "I hope this email finds you well."
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write a cold email for a 20-min discovery call |
+        | **C** | Freelance UX designer → head of product at SaaS company |
+        | **E** | Avoid "I hope this email finds you well" |
+        | **I** | Under 120 words; reference new feature; lead with value |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 6. Annual Report Narrative
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write an annual report section.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write the "Letter from the CEO" section of an annual report for a
+        mid-size NGO focused on climate education in South Asia. Tone:
+        hopeful but honest about challenges. Length: 300 words. Acknowledge
+        one setback from the year, explain what was learned, and pivot to
+        a forward-looking commitment. No corporate jargon.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write CEO letter for NGO annual report |
+        | **C** | Climate education NGO, South Asia focus |
+        | **I** | 300 words; hopeful-honest tone; setback + lesson + forward commitment |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 7. Speech Opening
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write a speech intro.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write the opening 90 seconds of a keynote speech for a startup
+        founder addressing 300 investors at a climate tech summit. The
+        company builds grid-scale battery storage. Open with a specific
+        story or moment — not a statistic — that makes investors feel the
+        problem viscerally. Avoid "climate crisis" clichés.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write 90-second keynote opening |
+        | **C** | Climate tech founder, 300 investors, battery storage company |
+        | **I** | Open with a specific story; visceral; avoid climate clichés |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 8. Rejection Email
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write a rejection email.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write a rejection email to a job applicant who made it to the final
+        round of interviews for a senior product manager role but was not
+        selected. They were genuinely strong — the decision was close. Be
+        warm but honest. Don't use hollow phrases like "we went with someone
+        who is a better fit." Leave the door open for future opportunities.
+        Under 150 words.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write final-round job rejection email |
+        | **C** | Strong candidate; close decision; PM role |
+        | **I** | Warm and honest; no hollow phrases; leave door open; under 150 words |
+
+    </TabItem>
+</Tabs>
+
+---
+
+### Coding
+
+#### 9. Code Review
+
+**Elements used:** `T` `R` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Review my code.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Act as a senior Python developer with a focus on security. Review
+        the following Flask API endpoint for vulnerabilities, performance
+        issues, and PEP 8 violations. List each issue with a severity
+        rating (low/medium/high) and a suggested fix.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Review Flask API for vulnerabilities, performance, PEP 8 |
+        | **R** | Senior Python developer focused on security |
+        | **I** | List each issue with severity + suggested fix |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 10. Explain an Algorithm
+
+**Elements used:** `T` `R` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Explain quicksort.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        You are a patient CS tutor. Explain the quicksort algorithm to a
+        student who understands Python loops and functions but has never
+        studied algorithms. Use an analogy first, then walk through a
+        concrete Python example with a list of 5 numbers. Avoid big-O
+        notation until the end.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Explain quicksort algorithm |
+        | **R** | Patient CS tutor |
+        | **C** | Student knows Python basics, no algorithm background |
+        | **I** | Analogy first, then Python example; hold big-O until the end |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 11. Debug an Error
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Fix my code.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Debug the following Python code that raises a KeyError. I'm using
+        Python 3.11 and pandas 2.1. Explain why the error occurs, fix it,
+        and briefly explain what the fixed version does differently. Don't
+        rewrite the whole function — only change what's necessary.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Debug Python KeyError |
+        | **C** | Python 3.11, pandas 2.1 |
+        | **I** | Explain cause + fix + difference; minimal changes only |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 12. Write a Function
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write a Python function.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write a Python 3.11 function that takes a list of dictionaries
+        (each with 'name' and 'score' keys) and returns the top N entries
+        sorted by score descending. Handle edge cases: empty list, N larger
+        than list length, missing keys. Include type hints and a docstring.
+        No external libraries.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write Python function for top-N sorted entries |
+        | **C** | Python 3.11, dicts with 'name' and 'score' keys |
+        | **I** | Handle edge cases; type hints; docstring; no external libraries |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 13. API Documentation
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Document this API.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write documentation for the following REST API endpoint in the
+        style of Stripe's API docs. Target audience: external developers
+        integrating for the first time. Include: endpoint URL, HTTP method,
+        required/optional parameters table, a sample request (cURL), a
+        sample response (JSON), and a list of possible error codes.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write API endpoint documentation |
+        | **C** | External developer audience; first-time integrators |
+        | **I** | Stripe-style docs: URL + method + params + cURL + JSON + error codes |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 14. Refactor Code
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Make my code better.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Refactor the following JavaScript function to improve readability
+        and reduce nesting. Keep the same input/output behavior. Use modern
+        ES2022+ syntax where it makes things cleaner. Add a one-line
+        comment above each logical section. Do not add new functionality.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Refactor JS function for readability |
+        | **C** | ES2022+ syntax acceptable |
+        | **I** | Same behavior; reduce nesting; section comments; no new features |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 15. Write Tests
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write tests for my code.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write unit tests for the following Python function using pytest.
+        Cover: the happy path, two edge cases (empty input and maximum
+        input), and one test that expects a ValueError to be raised. Use
+        descriptive test names that explain what is being tested.
+        No mocking needed.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write pytest unit tests for Python function |
+        | **C** | pytest framework |
+        | **I** | Happy path + 2 edge cases + 1 ValueError test; descriptive names; no mocking |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 16. Architecture Decision
+
+**Elements used:** `T` `R` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Should I use a microservices or monolith?
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Act as a staff software architect. I'm building a marketplace
+        platform (similar to Etsy) with a team of 5 engineers, expecting
+        to reach 10K transactions/day within 18 months. Should we start
+        with a monolith or microservices? Give me a concrete recommendation
+        with your reasoning, the 2 biggest risks of your recommendation,
+        and one signal that should make us switch approaches.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Monolith vs microservices decision for marketplace |
+        | **R** | Staff software architect |
+        | **C** | 5-engineer team; 10K transactions/day target; 18-month runway |
+        | **I** | Concrete recommendation + 2 risks + 1 signal to switch |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 17. Database Schema Design
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Design my database.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Design a PostgreSQL schema for a multi-tenant project management
+        SaaS tool. Core entities: Organizations, Users, Projects, Tasks,
+        Comments. Requirements: each Organization has many Users; Users can
+        belong to multiple Organizations; Tasks have priority
+        (low/medium/high/urgent) and status (backlog/todo/in-progress/done).
+        Include: table definitions with data types, primary and foreign
+        keys, and 2 indexes you'd add for query performance.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Design PostgreSQL schema for multi-tenant SaaS |
+        | **C** | Multi-tenant; Users in multiple Orgs; task priority + status enums |
+        | **I** | Table definitions + data types + PKs/FKs + 2 performance indexes |
+
+    </TabItem>
+</Tabs>
+
+---
+
+### Analysis
+
+#### 18. Competitor Analysis
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Analyze my competitors.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Analyze three main competitors of a B2B SaaS project management
+        tool targeting construction companies with 50–200 employees. For
+        each competitor, cover: pricing model, key differentiators, known
+        weaknesses, and one strategic gap we could exploit.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Analyze three main competitors in B2B SaaS |
+        | **C** | Target: construction companies, 50–200 employees |
+        | **I** | Cover pricing, differentiators, weaknesses, one exploitable gap |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 19. SWOT Analysis
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Do a SWOT analysis.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Do a SWOT analysis for a local bakery that sells artisan bread and
+        wants to expand to online delivery in Dhaka. Each quadrant should
+        have exactly 3 points. Make the Opportunities and Threats specific
+        to the Dhaka market — not generic business advice.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | SWOT analysis for artisan bakery going online |
+        | **C** | Dhaka market; local bakery with delivery expansion goal |
+        | **I** | Exactly 3 points per quadrant; city-specific opportunities and threats |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 20. Business Model Critique
+
+**Elements used:** `T` `R` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Tell me if my business model is good.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Act as a skeptical venture capitalist. I'll describe my business
+        model and I want you to steelman the bear case — focus on the
+        weaknesses, risks, and assumptions that could kill this business.
+        Don't encourage me. My model: subscription meal kit delivery for
+        office lunches in Dhaka, targeting companies with 50+ employees.
+        Be specific, not generic.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Critique business model from bear-case perspective |
+        | **R** | Skeptical VC |
+        | **C** | Office meal kit delivery in Dhaka; 50+ employee companies |
+        | **I** | Steelman weaknesses; no encouragement; specific, not generic |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 21. Customer Feedback Synthesis
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Analyze this feedback.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Analyze the following 20 customer support tickets from a SaaS tool.
+        Identify the top 3 recurring themes, quote one representative
+        example per theme, and rank them by frequency. Then suggest one
+        product improvement for each theme that could reduce support
+        volume. Keep the total response under 400 words.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Synthesize themes from 20 support tickets |
+        | **C** | SaaS customer support data |
+        | **I** | Top 3 themes + 1 quote each + frequency rank + 1 improvement; under 400 words |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 22. Pricing Sensitivity Analysis
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Help me set my price.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Help me design a simple pricing sensitivity analysis for a new
+        online course priced between $49–$199. The course teaches freelance
+        copywriting to professionals in South Asia. Suggest: 3 different
+        price points to test, what metric to measure (conversion rate,
+        revenue, or completion rate?), how long to run each test, and what
+        result should make me move up or down.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Design pricing sensitivity analysis for online course |
+        | **C** | Freelance copywriting course; South Asian professionals; $49–$199 range |
+        | **I** | 3 test prices + metric choice + test duration + decision criteria |
+
+    </TabItem>
+</Tabs>
+
+---
+
+### Research
+
+#### 23. Literature Summary
+
+**Elements used:** `T` `R` `C`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Summarize research on sleep.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        You are a neuroscience researcher. Summarize the current scientific
+        consensus on how sleep deprivation affects cognitive performance in
+        adults. Focus on studies from the last 10 years. Distinguish
+        between acute (one night) and chronic (weeks) deprivation effects.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Summarize scientific consensus on sleep deprivation and cognition |
+        | **R** | Neuroscience researcher |
+        | **C** | Focus on last 10 years; distinguish acute vs chronic deprivation |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 24. Fact-Check a Claim
+
+**Elements used:** `T` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Is this claim true?
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Fact-check the following claim: "Humans only use 10% of their brain."
+        Cite the scientific consensus, explain where the myth likely
+        originated, and give me one real neuroscience finding I could share
+        instead. Keep it under 200 words.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Fact-check "10% of brain" claim |
+        | **I** | Scientific consensus + origin of myth + one real alternative fact; under 200 words |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 25. User Research Interview Questions
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Give me interview questions.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Generate 15 user research interview questions for a fintech startup
+        building a savings app targeting first-time savers in Bangladesh.
+        Questions should uncover: current saving behaviors, pain points
+        with existing methods, emotional relationship with money. Mix
+        open-ended and behavioral ("tell me about a time…") questions.
+        No leading questions.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Generate 15 user research interview questions |
+        | **C** | Fintech savings app; first-time savers in Bangladesh |
+        | **I** | Cover behaviors + pain points + emotional angle; behavioral questions; no leading questions |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 26. Trend Identification
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        What are the trends in AI?
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Identify 5 emerging trends in AI-powered developer tools as of
+        2025, based on what's gaining adoption among startups and mid-size
+        tech companies. For each trend: a one-sentence description, one
+        example company or product, and a confidence level
+        (high/medium/speculative). Focus on developer workflow — not AI
+        news in general.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Identify 5 emerging AI developer tool trends |
+        | **C** | 2025; startup and mid-size tech adoption |
+        | **I** | Description + example + confidence level per trend; developer workflow focus |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 27. Counterargument Generation
+
+**Elements used:** `T` `R` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Argue against my idea.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Act as a rigorous devil's advocate. I'll share a business position
+        and I want you to generate the 5 strongest counterarguments a smart
+        skeptic would make. Each counterargument should be 2–3 sentences.
+        Rank them from most to least dangerous to my position. My position:
+        "Bangladesh should move all citizen-facing government services
+        online within 3 years."
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Generate 5 counterarguments to a policy position |
+        | **R** | Rigorous devil's advocate |
+        | **I** | 2–3 sentences per counterargument; ranked most to least dangerous |
+
+    </TabItem>
+</Tabs>
+
+---
+
+### Business
+
+#### 28. Email to a Difficult Client
+
+**Elements used:** `T` `C` `E` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write an email to an angry client.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write a professional email to a client who is upset that their
+        project was delivered two days late. Context: the delay was caused
+        by their team providing assets late, but they are blaming us. Tone
+        should be empathetic but factual. Do not be defensive. End with a
+        clear next step.
+
+        Example tone: "We understand this timing is frustrating, and we
+        want to make sure we're aligned on moving forward constructively."
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write professional email to upset client |
+        | **C** | Delay caused by their late assets; they blame us |
+        | **E** | Sample tone sentence provided |
+        | **I** | Empathetic but factual; not defensive; end with clear next step |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 29. Meeting Agenda
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write a meeting agenda.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Create a 60-minute agenda for a quarterly product roadmap review
+        meeting. Attendees: CEO, CTO, 2 product managers, 3 engineers.
+        Goal: align on Q3 priorities and cut scope by 20%. Structure the
+        agenda with time allocations. Flag which items require decisions
+        vs are just updates.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Create 60-minute quarterly roadmap review agenda |
+        | **C** | Mixed technical/exec audience; goal to cut scope 20% |
+        | **I** | Time allocations; flag decision items vs updates |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 30. Pricing Page Copy
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write pricing page content.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write copy for a 3-tier SaaS pricing page (Starter / Pro /
+        Enterprise) for a project management tool targeting marketing
+        agencies. Starter: $29/mo, Pro: $79/mo, Enterprise: custom.
+        For each tier: a one-line tagline, 5 feature bullets, and a CTA
+        button label. Make each tier feel like a natural upgrade,
+        not a hard sell.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write 3-tier SaaS pricing page copy |
+        | **C** | Marketing agency audience; $29/$79/custom pricing |
+        | **I** | Tagline + 5 bullets + CTA per tier; natural upgrade feel |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 31. Job Description
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write a job description.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write a job description for a Senior Growth Marketer at a B2B SaaS
+        startup (Series A, 40 employees) in the HR tech space. Salary:
+        $90K–$120K. Skills needed: paid acquisition, content strategy,
+        HubSpot, data analysis. Tone should be direct and honest about the
+        stage (fast-paced, some ambiguity) to attract candidates who thrive
+        there, not those who want stability.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write Senior Growth Marketer job description |
+        | **C** | Series A HR-tech SaaS, 40 employees, $90–$120K |
+        | **I** | Direct and honest about stage; attract hustle-oriented candidates |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 32. Risk Register
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        List project risks.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Create a risk register for a 6-month software development project
+        to build an internal HR portal for a company of 500 employees.
+        Identify 8 risks. For each: risk description, likelihood
+        (low/medium/high), impact (low/medium/high), and one mitigation
+        action. Format as a table.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Create 8-item risk register for HR portal project |
+        | **C** | 6-month software project; 500-person company |
+        | **I** | Likelihood + impact + mitigation per risk; table format |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 33. OKR Writing
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Help me write OKRs.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write Q3 OKRs for a growth team at a B2C mobile fitness app with
+        200K MAU and 4% monthly churn. Create 2 Objectives, each with 3
+        measurable Key Results. Each KR must have: a baseline (current
+        state) and a target. Avoid vague KRs like "improve user engagement".
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write Q3 OKRs for growth team |
+        | **C** | B2C fitness app; 200K MAU; 4% monthly churn |
+        | **I** | 2 Objectives × 3 KRs; baseline + target per KR; no vague KRs |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 34. Negotiation Preparation
+
+**Elements used:** `T` `R` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Help me negotiate a salary.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Act as a negotiation coach with expertise in tech salary
+        negotiation. I'm a senior data scientist with 7 years experience.
+        I have an offer of $80K. Market data suggests $95–110K. Help me:
+        (1) craft my opening counteroffer message, (2) prepare for the
+        "this is our best offer" pushback, and (3) identify my walkaway
+        number logic. Keep advice grounded and tactical.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Prepare for salary negotiation |
+        | **R** | Negotiation coach, tech specialist |
+        | **C** | Senior data scientist, 7 years, $80K offer, market at $95–$110K |
+        | **I** | Opening message + pushback prep + walkaway logic; tactical not general |
+
+    </TabItem>
+</Tabs>
+
+---
+
+### Creative
+
+#### 35. Short Story Opening
+
+**Elements used:** `T` `C` `E` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write a short story.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write the opening paragraph (200 words) of a literary short story
+        set in 1970s Dhaka during monsoon season. The protagonist is an
+        elderly typewriter repairman. Tone should feel like Gabriel García
+        Márquez — melancholic but lush. Avoid clichés about rain.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write 200-word opening paragraph |
+        | **C** | 1970s Dhaka, monsoon, elderly typewriter repairman |
+        | **E** | Tone like Gabriel García Márquez — melancholic but lush |
+        | **I** | Avoid rain clichés |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 36. Naming a Product
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Name my product.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Generate 10 name ideas for a mobile app that helps freelancers
+        track irregular income and set aside taxes automatically. Target
+        users: solo creatives aged 25–35 in the US. Names should be:
+        memorable, 1–2 syllables preferred, easy to spell, not already a
+        well-known brand. Include a 1-line rationale for each.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Generate 10 product name ideas |
+        | **C** | Freelancer tax app, US solo creatives 25–35 |
+        | **I** | 1–2 syllables preferred; easy to spell; unique; 1-line rationale each |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 37. Dialogue Writing
+
+**Elements used:** `T` `C` `E` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write a dialogue between two characters.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write a 200-word dialogue between two old friends meeting after 10
+        years. One has become very successful; the other has quietly lived
+        a simple life and is happy. The tension: the successful one assumes
+        the other must feel like a failure. Show this through subtext —
+        don't have either character say it explicitly.
+
+        Example of subtext done right: character A changes the subject
+        when their own life gets questioned.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write 200-word dialogue between old friends |
+        | **C** | Class difference; 10-year gap; one successful, one content |
+        | **E** | How to write subtext (show, don't tell) |
+        | **I** | Tension through subtext only; nothing said explicitly |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 38. Pitch Deck Narrative
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Help me with my pitch deck.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write the narrative thread for a 10-slide investor pitch deck for
+        an EdTech startup. Each slide: a 1-sentence headline that pulls
+        the story forward, and a 15-word max "what goes here" placeholder
+        description. The narrative arc should follow: Problem → Why Now
+        → Solution → Traction → Business Model → Market → Team → Ask.
+        Make it feel like a story, not a list.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write 10-slide pitch deck narrative |
+        | **C** | EdTech investor pitch |
+        | **I** | 1-sentence headline + 15-word placeholder per slide; story arc not a list |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 39. Brand Voice Guide
+
+**Elements used:** `T` `C` `E` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write a brand voice guide.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Create a concise brand voice guide for a Gen Z-focused mental
+        health app. Include: tone description (3 adjectives with
+        explanation), 5 words we always use, 5 words we never use, and
+        3 before/after example rewrites showing the voice in action.
+        The brand should feel like a wise, calm older sibling — not a
+        therapist, not a cheerleader.
+
+        Example of voice done WRONG:
+        "Unlock your best mental health journey today! 💪"
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Create brand voice guide for mental health app |
+        | **C** | Gen Z audience; wise calm sibling persona |
+        | **E** | Example of wrong voice |
+        | **I** | 3 adjectives + 5 do/don't words + 3 before/after rewrites |
+
+    </TabItem>
+</Tabs>
+
+---
+
+### Learning
+
+#### 40. Study Plan
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Help me learn Spanish.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Create a 30-day study plan to reach conversational Spanish level
+        (A2) for someone who: has zero Spanish background, can study 30
+        minutes per day, travels to Mexico City in 35 days. Prioritize
+        spoken survival phrases over grammar theory. Recommend free
+        resources only.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Create 30-day Spanish study plan |
+        | **C** | Zero background, 30 min/day, travel in 35 days |
+        | **I** | Prioritize spoken phrases; grammar second; free resources only |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 41. Explain a Concept Simply
+
+**Elements used:** `T` `R` `C`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Explain machine learning.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        You are a brilliant teacher who can explain anything to a curious
+        12-year-old. Explain how a machine learning model learns from data,
+        using only everyday analogies. No jargon. Make it feel like a fun
+        story, not a textbook. Aim for 150 words.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Explain how ML learns from data |
+        | **R** | Teacher explaining to a curious 12-year-old |
+        | **C** | No jargon; everyday analogies only; 150 words |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 42. Teaching a Skill
+
+**Elements used:** `T` `R` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Teach me Excel.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        You are a patient Excel trainer with 10 years of corporate training
+        experience. Teach me how to use VLOOKUP for a practical business
+        scenario: matching customer IDs from a sales sheet to a customer
+        database. Walk me through each argument step by step. After the
+        explanation, give me 2 practice exercises.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Teach VLOOKUP for customer ID matching |
+        | **R** | Patient Excel trainer, 10 years experience |
+        | **C** | Practical business scenario |
+        | **I** | Step-by-step each argument; 2 practice exercises at the end |
+
+    </TabItem>
+</Tabs>
+
+---
+
+### Data
+
+#### 43. Data Interpretation
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Analyze this data.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Interpret the following monthly sales data for an e-commerce store.
+        Identify the top 2 trends, one anomaly worth investigating, and one
+        actionable recommendation. Present findings in plain language —
+        the audience is the founder, not a data analyst.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Interpret monthly sales data |
+        | **C** | Audience is non-technical founder |
+        | **I** | Top 2 trends + one anomaly + one recommendation; plain language |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 44. Dashboard KPI Selection
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        What metrics should I track?
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Recommend 8 KPIs for a weekly executive dashboard at an early-stage
+        D2C e-commerce company (12 months old, $500K ARR, selling skincare
+        products). For each KPI: name, why it matters at this stage, and
+        the ideal measurement cadence (daily/weekly/monthly). Exclude
+        vanity metrics like raw social media followers.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Recommend 8 KPIs for executive dashboard |
+        | **C** | D2C e-commerce, early-stage, $500K ARR, skincare |
+        | **I** | Name + rationale + cadence per KPI; exclude vanity metrics |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 45. SQL Query Explanation
+
+**Elements used:** `T` `R` `C`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Explain this SQL query.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        You are a database tutor. Explain the following SQL query line by
+        line for a junior analyst who knows basic SELECT statements but has
+        never used window functions or CTEs. Use a concrete example with
+        made-up data to show what the query actually returns. Highlight any
+        performance considerations.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Explain SQL query with window functions and CTEs |
+        | **R** | Database tutor |
+        | **C** | Audience: junior analyst who knows basic SQL only |
+
+    </TabItem>
+</Tabs>
+
+---
+
+### Personal
+
+#### 46. Career Decision
+
+**Elements used:** `T` `R` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Should I switch jobs?
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Act as an objective career coach. I'm a 4-year mid-level software
+        engineer at a stable but slow-growth company. I have an offer from
+        an early-stage startup: 25% salary bump, equity, but more risk.
+        I have a mortgage and a 6-month emergency fund. Help me think
+        through this decision with a structured pros/cons analysis.
+        Don't give me a direct answer — help me think.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Structure a career decision between stable job and startup offer |
+        | **R** | Objective career coach |
+        | **C** | 4-year engineer, mortgage, 6-month fund, 25% raise + equity |
+        | **I** | Pros/cons framework; don't give direct answer |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 47. Difficult Conversation Prep
+
+**Elements used:** `T` `R` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Help me with a hard conversation.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Act as a communication coach. Help me prepare for a conversation
+        where I need to tell my business partner that I want to reduce my
+        involvement from full-time to 2 days a week due to burnout. I want
+        to preserve the relationship. Help me: (1) structure the key
+        points, (2) anticipate their likely reactions and how to respond,
+        (3) identify one thing I should NOT say.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Prepare for burnout disclosure with business partner |
+        | **R** | Communication coach |
+        | **C** | Partnership preservation; full-time to 2 days/week |
+        | **I** | Structure + anticipated reactions + one thing to not say |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 48. Feedback Message
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Help me give feedback.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Draft a Slack message giving constructive feedback to a junior team
+        member who frequently sends long, hard-to-read messages in group
+        channels. I want to: acknowledge their effort, explain the impact,
+        suggest a better approach. Tone: warm and direct, not
+        passive-aggressive. This is my first time addressing it.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Draft constructive feedback Slack message |
+        | **C** | Junior teammate; first time addressing this issue |
+        | **I** | Acknowledge effort + explain impact + suggest approach; warm and direct |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 49. Learning from Failure
+
+**Elements used:** `T` `R` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Help me process a failure.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Act as a thoughtful coach using an Appreciative Inquiry lens. I
+        just launched a product that completely flopped — 12 months of
+        work, almost no users. I feel like a failure. Help me: (1) identify
+        what I actually learned, (2) find one unexpected positive, and
+        (3) create a sentence I can tell myself when I doubt my abilities.
+        Don't give me toxic positivity.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Process a product launch failure |
+        | **R** | Appreciative Inquiry coach |
+        | **C** | 12-month project, near-zero users, feeling like failure |
+        | **I** | Learning + unexpected positive + self-talk sentence; no toxic positivity |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 50. Habit System Design
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Help me build better habits.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Design a personalized 8-week habit system for someone who: works
+        from home, has a newborn (very low willpower budget), wants to
+        improve: sleep consistency, daily movement, and reduced phone use
+        before bed. Apply atomic habit principles. Design the system around
+        identity ("I am someone who…"), not outcomes. Start with the
+        minimum viable version of each habit.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Design 8-week habit system around 3 goals |
+        | **C** | Work-from-home, new parent; low willpower budget |
+        | **I** | Atomic habit principles; identity-based framing; minimum viable versions |
+
+    </TabItem>
+</Tabs>
+
+---
+
+### Design
+
+#### 51. UX Error Messages
+
+**Elements used:** `T` `C` `E` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write an error message.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write 5 error message variations for a failed payment in a SaaS
+        dashboard. Users are small business owners. Each message should:
+        explain what happened (in 1 sentence), suggest one action.
+        Tone: calm and helpful, not technical.
+
+        Example of BAD error copy:
+        "Transaction failed: ERR_PAYMENT_GATEWAY_TIMEOUT_503"
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write 5 payment error message variations |
+        | **C** | Small business owner audience |
+        | **E** | Bad error example to avoid |
+        | **I** | 1-sentence explanation + one action per message; calm tone |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 52. Onboarding Flow Copy
+
+**Elements used:** `T` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Write onboarding text.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Write copy for a 4-step onboarding flow for a project management
+        app. Step 1: account setup. Step 2: invite team. Step 3: create
+        first project. Step 4: celebrate. For each step: a headline
+        (max 6 words), a subheadline (max 15 words), and a primary CTA
+        button label. Tone: energetic but not cheesy.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Write 4-step onboarding flow copy |
+        | **C** | Project management app |
+        | **I** | Headline (6w) + subheadline (15w) + CTA per step; energetic not cheesy |
+
+    </TabItem>
+</Tabs>
+
+---
+
+#### 53. Design Critique
+
+**Elements used:** `T` `R` `C` `I`
+
+<Tabs>
+    <TabItem value="weak" label="❌ Weak Prompt">
+
+        ```
+        Give me feedback on my design.
+        ```
+
+    </TabItem>
+    <TabItem value="strong" label="✅ Strong Prompt" default>
+
+        ```
+        Act as a senior product designer with expertise in B2B SaaS.
+        Review the following landing page for a data analytics tool
+        targeting finance teams. Give feedback in this format: 3 things
+        working well, 3 specific problems, and 2 high-priority improvements.
+        Be direct and don't soften criticism. Focus on conversion and
+        usability, not aesthetics.
+        ```
+
+        | Element | Applied |
+        |---------|---------|
+        | **T** | Critique landing page design |
+        | **R** | Senior product designer, B2B SaaS expert |
+        | **C** | Data analytics tool for finance teams |
+        | **I** | 3 working + 3 problems + 2 improvements; direct; conversion and usability focus |
+
+    </TabItem>
+</Tabs>
+
+---
+
+## Key Takeaways
+
+:::note Rule 1 — Task is not enough
+Almost every weak prompt above is just a Task. Adding Context alone — one sentence about your audience or situation — usually doubles output quality.
+:::
+
+:::note Rule 2 — Role changes everything
+When you need expert-level output (code review, career advice, design critique), assigning a Role tells the model what vocabulary, assumptions, and standards to apply.
+:::
+
+:::note Rule 3 — Examples beat descriptions
+You can describe tone for 5 sentences, or you can show one example. The example wins every time. Use Examples (E) whenever you care about style, format, or voice.
+:::
+
+:::note Rule 4 — Instructions are guardrails
+The most common Instructions are: length limits, what to exclude, format specs, and things *not* to do. These prevent the most common failure modes.
+:::
+
+:::tip Practice exercise
+Take any prompt you've used in the past week. Identify which TCREI elements it has. Now add the missing ones. Run both versions and compare.
+:::
+
+---
+
+## TCREI Cheat Sheet
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                  TCREI PROMPT FORMULA                   │
+├────────┬────────────┬──────────────────────────────────┤
+│ T      │ Task       │ Specific verb + deliverable       │
+│ C      │ Context    │ Audience, situation, constraints  │
+│ R      │ Role       │ "Act as a [expert]…"              │
+│ E      │ Examples   │ Show one good or bad sample       │
+│ I      │ Instructions│ Format, length, what to avoid   │
+└────────┴────────────┴──────────────────────────────────┘
+
+You don't need all 5 every time.
+  Simple tasks     → T + I (2 elements)
+  Expert output    → T + C + R (3 elements)
+  Style-sensitive  → T + C + E + I (4 elements)
+  Complex briefing → All 5
+```
+
+---
+
+*53 examples across Writing, Coding, Analysis, Research, Business, Creative, Learning, Data, Personal, and Design domains.*
