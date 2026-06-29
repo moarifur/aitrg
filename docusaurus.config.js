@@ -66,7 +66,7 @@ const config = {
           },
 
           {
-            href: 'https://github.com/moarifur',
+            href: 'https://github.com/moarifur/aitrg',
             label: 'GitHub',
             position: 'right',
           },
